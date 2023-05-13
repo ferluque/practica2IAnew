@@ -317,17 +317,14 @@ bool Find(const list<nodeN3>& lista, const nodeN3& obj);
 int Distancia(const nodeN3 &origen, Action accion, const vector<vector<unsigned char>> &mapa, bool sonambulo);
 int DistanciaManhattan(const ubicacion &origen, const ubicacion &destino);
 int DistanciaChebyshev(const ubicacion& origen, const ubicacion& destino);
-int DistanciaChebyshevMejorada(const nodeN3 &origen, const ubicacion &destino, const unsigned char &casillaOrigen);
+int DistanciaChebyshevMejorada(const nodeN3 &origen, const ubicacion &destino, const unsigned char &casillaOrigenSon, const unsigned char &casillaOrigenJug);
 bool cmpN3(nodeN3 a, nodeN3 n);
+void print_queue(priority_queue<nodeN3> q, vector<vector<unsigned char>>& mapaConPlan);
 
 // Nivel 4
-list<Action> AStarN4(const stateN0& inicio, const ubicacion& final, const vector<vector<unsigned char>>& mapa, const vector<vector<pair<int,int>>>& casillasTerreno);
 void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const stateN4 &st, const vector<vector<pair<int, int>>> &casillasTerreno, const Sensores &sensores);
 stateN4 UpdateState(const stateN4& st, const Action accion);
 void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const ubicacion &st, const vector<vector<pair<int, int>>> &casillasTerreno);
-list<Action> AnchuraSoloJugadorN4(const stateN0 &inicio, const ubicacion &final, const vector<vector<unsigned char>> &mapa);
-list<Action> AnchuraSonambuloN4(const stateN0 &inicio, const ubicacion &final, const vector<vector<unsigned char>> &mapa,
-							  const vector<vector<pair<int, int>>> &casillasTerreno);
 
 bool CasillaTransitable(const ubicacion& x, const vector<vector<unsigned char>>& mapa);
 ubicacion NextCasilla(const ubicacion& pos);

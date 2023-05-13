@@ -1,0 +1,5 @@
+Calculando un nuevo plan
+Plan encontrado: 0, 1, 0, 0, 8, 8, 8, 8, 6, 6, 6, 
+Se completó el plan
+Mision alcanzada por el sonámbulo!
+Coste de Bateria: 18
