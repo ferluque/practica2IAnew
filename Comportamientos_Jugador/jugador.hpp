@@ -325,7 +325,7 @@ void print_queue(priority_queue<nodeN3> q, vector<vector<unsigned char>>& mapaCo
 void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const stateN4 &st, const vector<vector<pair<int, int>>> &casillasTerreno, const Sensores &sensores);
 stateN4 UpdateState(const stateN4& st, const Action accion);
 void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const ubicacion &st, const vector<vector<pair<int, int>>> &casillasTerreno);
-
+list<Action> AStarNoOptimo(const stateN0 &inicio, const ubicacion &final, const vector<vector<unsigned char>> &mapa, const vector<vector<pair<int, int>>> &casillasTerreno);
 bool CasillaTransitable(const ubicacion& x, const vector<vector<unsigned char>>& mapa);
 ubicacion NextCasilla(const ubicacion& pos);
 stateN0 apply(Action action, const stateN0& current_state, const vector<vector<unsigned char>>& mapa);

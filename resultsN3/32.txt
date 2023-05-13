@@ -1,1 +1,4 @@
 Calculando un nuevo plan
+Plan encontrado: 1, 0, 1, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 2, 0, 0, 2, 0, 1, 0, 0, 0, 2, 0, 8, 8, 6, 6, 6, 2, 6, 6, 7, 2, 0, 1, 0, 0, 6, 0, 2, 7, 0, 1, 6, 0, 0, 1, 6, 0, 7, 6, 6, 6, 0, 6, 0, 0, 6, 8, 6, 0, 0, 6, 
+Se agoto el tiempo de deliberacion!
+Coste de Bateria: 1
