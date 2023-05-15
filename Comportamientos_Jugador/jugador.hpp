@@ -298,8 +298,6 @@ class ComportamientoJugador : public Comportamiento {
 
 // Nivel 0
 list<Action> AnchuraSoloJugador(const stateN0& inicio, const ubicacion& final, const vector<vector<unsigned char>>& mapa);
-bool Find(const list<stateN0>& lista, const stateN0& obj);
-bool Find(const list<nodeN0>& lista, const stateN0& obj);
 
 // Nivel 1
 list<Action> AnchuraSonambulo(const stateN0& inicio, const ubicacion& final, const vector<vector<unsigned char>>& mapa, const vector<vector<pair<int,int>>>& casillasTerreno);
@@ -309,7 +307,6 @@ bool EsVisible(const stateN0& st, const vector<vector<pair<int,int>>>& casillasT
 list<Action> DijkstraSoloJugador(const stateN0& inicio, const ubicacion& final, const vector<vector<unsigned char>>& mapa);
 ubicacion apply(Action action, const ubicacion& current_state, const vector<vector<unsigned char>>& mapa, const pair<int,int>& sonambulo);
 int Distancia(const nodeN2 &origen, Action accion, const vector<vector<unsigned char>> &mapa);
-bool Find(const list<nodeN2>& lista, const nodeN2& obj);
 
 // Nivel 3
 list<Action> AStar(const stateN0& inicio, const ubicacion& final, const vector<vector<unsigned char>>& mapa, const vector<vector<pair<int,int>>>& casillasTerreno);
@@ -322,10 +319,10 @@ bool cmpN3(nodeN3 a, nodeN3 n);
 void print_queue(priority_queue<nodeN3> q, vector<vector<unsigned char>>& mapaConPlan);
 
 // Nivel 4
-void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const stateN4 &st, const vector<vector<pair<int, int>>> &casillasTerreno, const Sensores &sensores);
 stateN4 UpdateState(const stateN4& st, const Action accion);
 void rellenaMapa(const vector<unsigned char> &terreno, vector<vector<unsigned char>> &mapa, const ubicacion &st, const vector<vector<pair<int, int>>> &casillasTerreno);
-list<Action> AStarNoOptimo(const stateN0 &inicio, const ubicacion &final, const vector<vector<unsigned char>> &mapa, const vector<vector<pair<int, int>>> &casillasTerreno);
+
+
 bool CasillaTransitable(const ubicacion& x, const vector<vector<unsigned char>>& mapa);
 ubicacion NextCasilla(const ubicacion& pos);
 stateN0 apply(Action action, const stateN0& current_state, const vector<vector<unsigned char>>& mapa);
